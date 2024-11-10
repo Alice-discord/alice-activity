@@ -9,8 +9,10 @@
     "preview": "vite preview",
     "host": "vite --host"
   },
-  "dependencies": {
-    "@discord/embedded-app-sdk": "^1.6.1",
+  "devDependencies": {
     "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "@discord/embedded-app-sdk": "^1.6.1"
   }
 }
