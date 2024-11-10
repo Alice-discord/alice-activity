@@ -3,9 +3,10 @@ import { DiscordSDK } from "@discord/embedded-app-sdk";
 
 import "./style.css";
 import rocketLogo from '/rocket.png';
+const DISCORD_CLIENT_ID = `1303887717247090758`
 
 // Instantiate the SDK
-const discordSdk = new DiscordSDK(import.meta.env.VITE_DISCORD_CLIENT_ID);
+const discordSdk = new DiscordSDK(DISCORD_CLIENT_ID);
 
 setupDiscordSdk().then(() => {
   console.log("Discord SDK is ready");
