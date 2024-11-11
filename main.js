@@ -1,8 +1,8 @@
+import "/style.css";
+import rocketLogo from '/rocket.png';
+
 // Import the SDK
 import { DiscordSDK } from "@discord/embedded-app-sdk";
-
-import "./style.css";
-import rocketLogo from '/rocket.png';
 const DISCORD_CLIENT_ID = `1303887717247090758`
 
 // Instantiate the SDK
