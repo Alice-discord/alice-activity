@@ -1,3 +1,4 @@
+import "/style.css";
 import rocketLogo from '/rocket.png';
 
 // Import the SDK
@@ -15,8 +16,7 @@ async function setupDiscordSdk() {
   await discordSdk.ready();
 }
 
-document.querySelector('#app').innerHTML =`
-  <link rel="stylesheet" type="text/css" href="./style.css">
+document.querySelector('#app').innerHTML = `
   <div>
     <img src="${rocketLogo}" class="logo" alt="Discord" />
     <h1>Hello, World!</h1>
