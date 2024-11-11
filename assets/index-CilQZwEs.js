@@ -2,5 +2,6 @@
   <div>
     <img src="${gs}" class="logo" alt="Discord" />
     <h1>Hello, World!</h1>
+    <p>This is all temporary!!
   </div>
 `;
