@@ -17,6 +17,7 @@ if (!import.meta.env.DEV) {
   
     // We can now make API calls within the scopes we requested in setupDiscordSDK()
     // Note: the access_token returned is a sensitive secret and should be treated as such
+    appendVoiceChannelName();
   });
   
   async function setupDiscordSdk() {
@@ -60,6 +61,29 @@ if (!import.meta.env.DEV) {
       throw new Error("Authenticate command failed");
     }
   }
+
+  async function appendVoiceChannelName() {
+    const app = document.querySelector('#app');
+  
+    let activityChannelName = 'Unknown';
+  
+    // Requesting the channel in GDMs (when the guild ID is null) requires
+    // the dm_channels.read scope which requires Discord approval.
+    if (discordSdk.channelId != null && discordSdk.guildId != null) {
+      // Over RPC collect info about the channel
+      const channel = await discordSdk.commands.getChannel({channel_id: discordSdk.channelId});
+      if (channel.name != null) {
+        activityChannelName = channel.name;
+      }
+    }
+  
+    // Update the UI with the name of the current voice channel
+    const textTagString = `Activity Channel: "${activityChannelName}"`;
+    const textTag = document.createElement('p');
+    textTag.textContent = textTagString;
+    app.appendChild(textTag);
+  }
+
 }
 
 document.querySelector('#app').innerHTML = `
