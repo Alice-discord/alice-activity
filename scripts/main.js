@@ -15,7 +15,7 @@ if (!import.meta.env.DEV) {
   async function setupDiscordSdk() {
     await discordSdk.ready();
     console.log("Discord SDK is ready");
-  
+
     // Authorize with Discord Client
     const { code } = await discordSdk.commands.authorize({
       client_id: DISCORD_CLIENT_ID,
@@ -75,7 +75,7 @@ if (!import.meta.env.DEV) {
     textTag.textContent = textTagString;
     app.appendChild(textTag);
   }
-
+  
   setupDiscordSdk().then(() => {
     console.log("Discord SDK is authenticated");
   
@@ -83,8 +83,8 @@ if (!import.meta.env.DEV) {
     // Note: the access_token returned is a sensitive secret and should be treated as such
     appendVoiceChannelName();
   });
-
 }
+
 
 document.querySelector('#app').innerHTML = `
   <div>
