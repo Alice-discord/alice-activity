@@ -13,6 +13,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+$logoh: 6em;
+$logop: 1.5em;
+
+.rocket {
+  height: $logoh;
+  padding: $logop;
+}
+
+.svglo {
+  height: $logoh;
+  padding: $logop;
+}
+
 body {
   margin: 0;
   display: flex;
