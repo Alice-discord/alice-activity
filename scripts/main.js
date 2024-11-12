@@ -23,7 +23,7 @@ async function setupDiscordSdk() {
 
   // Authorize with Discord Client
   const { code } = await discordSdk.commands.authorize({
-    client_id: import.meta.env.DISCORD_CLIENT_ID,
+    client_id: DISCORD_CLIENT_ID,
     response_type: "code",
     state: "",
     prompt: "none",
