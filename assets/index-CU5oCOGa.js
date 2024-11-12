@@ -3,6 +3,6 @@
     <img src="${vs}" class="rocket" alt="Discord-Rocket">
     <h1>Hello, World!</h1>
     <p>This is all temporary!!
-    <br><img src="${Es}" class="svglo" alt="svg">
+      <br><img src="${Es}" class="svglo" alt="svg">
   </div>
 `;vu().then(()=>{console.log("Discord SDK is authenticated"),Eu()});
