@@ -76,15 +76,6 @@ const app = document.querySelector('#app');
 }
 
 
-
-setupDiscordSdk().then(() => {
-  console.log("Discord SDK is authenticated");
-
-  // We can now make API calls within the scopes we requested in setupDiscordSDK()
-  // Note: the access_token returned is a sensitive secret and should be treated as such
-  appendVoiceChannelName();
-});
-
 document.querySelector('#app').innerHTML = `
   <div>
     <img src="${rocket}" class="rocket" alt="Discord-Rocket">
@@ -93,3 +84,11 @@ document.querySelector('#app').innerHTML = `
     <br><img src="${svglogo}" class="svglo" alt="svg">
   </div>
 `;
+
+setupDiscordSdk().then(() => {
+  console.log("Discord SDK is authenticated");
+
+  // We can now make API calls within the scopes we requested in setupDiscordSDK()
+  // Note: the access_token returned is a sensitive secret and should be treated as such
+  appendVoiceChannelName();
+});
