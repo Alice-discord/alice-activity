@@ -46,25 +46,12 @@ h1 {
   text-align: center;
 }
 
-.box{
-  background-color: transparent;
-  margin: 0 auto;
-  width: 500px;
-  height: 300px;
-  position: relative;
-  box-shadow: inset 0 0 20px #155;
-  border-radius: 20px;
-  border: 1px solid #111;
-  overflow: hidden;
-}
-
-.box b {
+:root b {
   display: block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #999999;
-  box-shadow: inset -5px -5px 5px rgba(0,0,0,.6), 15px 15px 2px rgba(0,0,0,.04);
+  height: $logoh;
+  width: $logoh;
+  background-image: url(../svg/svg-2.svg);
+  background-size: 100%;
   position: absolute;
   -webkit-animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
   -moz-animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
@@ -73,27 +60,27 @@ h1 {
 }
 
 @-webkit-keyframes moveX {
-  from { left: 0; } to { left: 480px; }
+  from { left: 0; } to { left: 92.5vw; }
 }
 @-moz-keyframes moveX {
-  from { left: 0; } to { left: 480px; }
+  from { left: 0; } to { left: 92.5vw; }
 }
 @-o-keyframes moveX {
-  from { left: 0; } to { left: 480px; }
+  from { left: 0; } to { left: 92.5vw; }
 }
 @keyframes moveX {
-  from { left: 0; } to { left: 480px; }
+  from { left: 0; } to { left: 92.5vw; }
 }
 
 @-webkit-keyframes moveY {
-  from { top: 0; } to { top: 280px; }
+  from { top: 0; } to { top: 90vh; }
 }
 @-moz-keyframes moveY {
-  from { top: 0; } to { top: 280px; }
+  from { top: 0; } to { top: 90vh; }
 }
 @-o-keyframes moveY {
-  from { top: 0; } to { top: 280px; }
+  from { top: 0; } to { top: 90vh; }
 }
 @keyframes moveY {
-  from { top: 0; } to { top: 280px; }
+  from { top: 0; } to { top: 90vh; }
 }

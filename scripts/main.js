@@ -9,8 +9,10 @@ let auth;
 
 let serverurl = new URL(`http://${DISCORD_CLIENT_ID}.discordsays.com/.proxy/server/alicediscord`);
 
-const discordSdk = new DiscordSDK(DISCORD_CLIENT_ID);
-  
+if (!import.meta.env.DEV){
+var discordSdk = new DiscordSDK(DISCORD_CLIENT_ID);
+}
+
 async function setupDiscordSdk() {
   await discordSdk.ready();
   console.log("Discord SDK is ready");
@@ -80,9 +82,7 @@ document.querySelector('#app').innerHTML = `
   <div>
     <img src="${rocket}" class="rocket" alt="Discord-Rocket">
     <h1>Hello, World!</h1>
-    <p>This is all temporary!!
-      <br><img src="${svglogo}" class="svglo" alt="svg">
-    </p>
+    <p>This is all temporary!!</p>
     <div class="box"><b></b></div>
   </div>
 `;
