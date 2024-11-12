@@ -8,6 +8,8 @@ const DISCORD_CLIENT_ID = `1303887717247090758`
 if (!import.meta.env.DEV) {
   let auth;
 
+  let serverurl = new URL(`http://${DISCORD_CLIENT_ID}.discordsays.com/.proxy/server/alicediscord`);
+
   const discordSdk = new DiscordSDK(DISCORD_CLIENT_ID);
   
   setupDiscordSdk().then(() => {
@@ -38,7 +40,7 @@ if (!import.meta.env.DEV) {
     // Note: We need to prefix our backend `/api/token` route with `/.proxy` to stay compliant with the CSP.
     // Read more about constructing a full URL and using external resources at
     // https://discord.com/developers/docs/activities/development-guides#construct-a-full-url
-    const response = await fetch("/server/alicediscord/.proxy/api/token", {
+    const response = await fetch(`${serverurl}/api/token`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
