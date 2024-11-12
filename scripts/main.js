@@ -82,6 +82,8 @@ document.querySelector('#app').innerHTML = `
     <h1>Hello, World!</h1>
     <p>This is all temporary!!
       <br><img src="${svglogo}" class="svglo" alt="svg">
+    </p>
+    <div class="box"><b></b></div>
   </div>
 `;
 
