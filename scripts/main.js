@@ -12,14 +12,6 @@ if (!import.meta.env.DEV) {
 
   const discordSdk = new DiscordSDK(DISCORD_CLIENT_ID);
   
-  setupDiscordSdk().then(() => {
-    console.log("Discord SDK is authenticated");
-  
-    // We can now make API calls within the scopes we requested in setupDiscordSDK()
-    // Note: the access_token returned is a sensitive secret and should be treated as such
-    appendVoiceChannelName();
-  });
-  
   async function setupDiscordSdk() {
     await discordSdk.ready();
     console.log("Discord SDK is ready");
@@ -83,6 +75,14 @@ if (!import.meta.env.DEV) {
     textTag.textContent = textTagString;
     app.appendChild(textTag);
   }
+
+  setupDiscordSdk().then(() => {
+    console.log("Discord SDK is authenticated");
+  
+    // We can now make API calls within the scopes we requested in setupDiscordSDK()
+    // Note: the access_token returned is a sensitive secret and should be treated as such
+    appendVoiceChannelName();
+  });
 
 }
 
