@@ -1,7 +1,7 @@
 import "/style.css";
 import { DiscordSDK } from "@discord/embedded-app-sdk";
 // Define varibles (For the life of me i cant get .env varibles working)
-const devmode = true
+const devmode = false
 const DISCORD_CLIENT_ID = `1303887717247090758`
 
 if (!devmode) {
