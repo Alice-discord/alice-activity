@@ -2,7 +2,6 @@ import "../styles/style.scss";
 import rocket from "../images/rocket.png";
 
 import { DiscordSDK } from "@discord/embedded-app-sdk";
-// Define varibles (For the life of me i cant get .env varibles working)
 
 let auth;
 
@@ -54,9 +53,9 @@ const { code } = await discordSdk.commands.authorize({
   }
 }
 
-  async function appendVoiceChannelName() {
-const app = document.querySelector('#app');
-  
+async function appendVoiceChannelName() {
+  let app = document.querySelector('#app') as HTMLElement;
+
   let activityChannelName = 'Unknown';
   
   // Requesting the channel in GDMs (when the guild ID is null) requires
@@ -77,14 +76,14 @@ const app = document.querySelector('#app');
 }
 
 
-document.querySelector('#app').innerHTML = `
+document.querySelector('#app')!.innerHTML = `
   <div>
     <img src="${rocket}" class="rocket" alt="Discord-Rocket">
     <h1>Hello, World!</h1>
     <p>This is all temporary!!</p>
     <div class="box"><b></b></div>
   </div>
-`;
+`
 
 setupDiscordSdk().then(() => {
   console.log("Discord SDK is authenticated");
