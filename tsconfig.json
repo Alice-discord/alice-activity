@@ -16,6 +16,6 @@
             "~/*": ["resources/*"]
         }
     },
-    "include": ["resources/**/*","./scripts/main.tsx"],
+    "include": ["resources/**/*","src/index.ts"],
     "exclude": ["public/**/*", "node_modules", "vendor"]
 }

@@ -1,4 +1,4 @@
-import "../styles/style.scss";
+import "./index.scss";
 import rocket from "../images/rocket.png";
 
 import { DiscordSDK } from "@discord/embedded-app-sdk";
@@ -13,7 +13,6 @@ var discordSdk = new DiscordSDK(import.meta.env.VITE_DISCORD_CLIENT_ID);
 
 async function setupDiscordSdk() {
   await discordSdk.ready();
-  console.log("Discord SDK is ready");
 
 // Authorize with Discord Client
 const { code } = await discordSdk.commands.authorize({
@@ -41,6 +40,7 @@ const { code } = await discordSdk.commands.authorize({
       code,
     }),
   });
+  
   const { access_token } = await response.json();
 
   // Authenticate with Discord client (using the access_token)
