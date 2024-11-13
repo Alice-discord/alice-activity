@@ -12,8 +12,6 @@ if (!import.meta.env.DEV){
 var discordSdk = new DiscordSDK(import.meta.env.VITE_DISCORD_CLIENT_ID);
 }
 
-console.log(await import.meta.env.VITE_DISCORD_CLIENT_ID)
-
 async function setupDiscordSdk() {
   await discordSdk.ready();
   console.log("Discord SDK is ready");
