@@ -1,17 +1,18 @@
 import "../styles/style.scss";
 import rocket from "../images/rocket.png";
-import svglogo from "../svg/svg-2.svg"
+
 import { DiscordSDK } from "@discord/embedded-app-sdk";
 // Define varibles (For the life of me i cant get .env varibles working)
-const DISCORD_CLIENT_ID = `1303887717247090758`
 
 let auth;
 
-let serverurl = new URL(`http://${DISCORD_CLIENT_ID}.discordsays.com/.proxy/server/alicediscord`);
+let serverurl = new URL(`http://${import.meta.env.VITE_DISCORD_CLIENT_ID}.discordsays.com/.proxy/server/alicediscord`);
 
 if (!import.meta.env.DEV){
-var discordSdk = new DiscordSDK(DISCORD_CLIENT_ID);
+var discordSdk = new DiscordSDK(import.meta.env.VITE_DISCORD_CLIENT_ID);
 }
+
+console.log(await import.meta.env.VITE_DISCORD_CLIENT_ID)
 
 async function setupDiscordSdk() {
   await discordSdk.ready();
@@ -19,7 +20,7 @@ async function setupDiscordSdk() {
 
 // Authorize with Discord Client
 const { code } = await discordSdk.commands.authorize({
-  client_id: DISCORD_CLIENT_ID,
+  client_id: import.meta.env.VITE_DISCORD_CLIENT_ID,
     response_type: "code",
     state: "",
     prompt: "none",
