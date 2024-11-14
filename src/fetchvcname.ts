@@ -1,7 +1,5 @@
 import {discordSdk} from './setupDiscord.ts'
 
-console.log("Discord SDK is authenticated");
-
 async function fetchVoiceChannelName() {
   let activityChannelName = 'Unknown';
   

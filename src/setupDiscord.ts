@@ -56,4 +56,4 @@ if (!import.meta.env.DEV){
     });
 };
 
-export {discordSdk}
+export {discordSdk, auth}

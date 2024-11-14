@@ -1,6 +1,6 @@
 <script setup>
 import Count from './components/Count.vue'
-import { activityChannelName } from './fetchvcname.ts'
+import { Guildicon } from './fetchservericon.ts'
 </script>
 
 <template>
@@ -13,7 +13,7 @@ import { activityChannelName } from './fetchvcname.ts'
       </a>
     </div>
     <Count msg="Discord & Alice Dev" />
-    <p>{{ activityChannelName }}</p>
+    <img :src="Guildicon" class="logo vue" alt="guild icon">
     <div class="box"><b></b></div>
   </template>
 
