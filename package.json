@@ -1,12 +1,12 @@
 {
   "name": "alice-activity",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build && echo client.alicediscord.com > dist/CNAME",
-    "deploy": "npm run build && gh-pages -d dist"
+    "dev": "npm i && vite",
+    "build": "npm i && vite build",
+    "deploy": "vite build && echo client.alicediscord.com > dist/CNAME && gh-pages -d dist"
   },
   "devDependencies": {
     "@types/react": "^18.3.12",
