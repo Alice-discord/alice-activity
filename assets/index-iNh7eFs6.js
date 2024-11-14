@@ -2,7 +2,9 @@
   <div>
     <img src="${ms}" class="rocket" alt="Discord-Rocket">
     <h1>Hello, World!</h1>
-    <p>This is all temporary!!</p>
+       <button type="button" class="click-me">
+       <h1>Click me!
+       </button> 
     <div class="box"><b></b></div>
   </div>
 `;_u().then(()=>{console.log("Discord SDK is authenticated"),mu()});
