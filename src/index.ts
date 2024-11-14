@@ -80,7 +80,7 @@ document.querySelector('#app')!.innerHTML = `
   <div>
     <img src="${rocket}" class="rocket" alt="Discord-Rocket">
     <h1>Hello, World!</h1>
-    <p>This is all temporary!!</p>
+    <button>PLAY<button>
     <div class="box"><b></b></div>
   </div>
 `
