@@ -1,11 +1,10 @@
-import { DiscordSDK, patchUrlMappings } from "@discord/embedded-app-sdk";
+import { DiscordSDK } from "@discord/embedded-app-sdk";
 
-let serverurl = new URL(`http://${import.meta.env.VITE_DISCORD_CLIENT_ID}.discordsays.com/.proxy/server/alicediscord`);
+let serverurl = new URL(`http://server.alicediscord.com`);
 
 let auth: any;
 
 if (!import.meta.env.DEV){
-patchUrlMappings([{prefix: '/server/alicediscord', target: 'server.alicediscord.com'}]);
 var discordSdk = new DiscordSDK(import.meta.env.VITE_DISCORD_CLIENT_ID);
 }
 
@@ -29,7 +28,7 @@ const { code } = await discordSdk.commands.authorize({
   // Note: We need to prefix our backend `/api/token` route with `/.proxy` to stay compliant with the CSP.
   // Read more about constructing a full URL and using external resources at
   // https://discord.com/developers/docs/activities/development-guides#construct-a-full-url
-  const response = await fetch(`${serverurl}/api/token`, {
+  const response = await fetch(`${serverurl}/.proxy/api/token`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
