@@ -4,22 +4,22 @@
   "version": "1.1.0",
   "type": "module",
   "scripts": {
-    "dev": "npm i && vite",
     "build": "npm i && vite build",
-    "deploy": "vite build && echo client.alicediscord.com > dist/CNAME && gh-pages -d dist"
+    "dev": "npm run build && vite",
+    "preview": "npm run build && vite preview",
+    "deploy": "npm run build && echo client.alicediscord.com > dist/CNAME && gh-pages -d dist"
   },
   "devDependencies": {
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
     "@typescript-eslint/eslint-plugin": "^8.14.0",
     "@typescript-eslint/parser": "^8.14.0",
     "gh-pages": "^6.2.0",
     "sass": "^1.80.6",
     "typescript": "^5.6.3",
-    "vite": "^5.0.8"
+    "vite": "^5.0.8",
+    "@vitejs/plugin-vue": "^5.1.4"
   },
   "dependencies": {
     "@discord/embedded-app-sdk": "^1.6.1",
-    "react": "^18.3.1"
+    "vue": "^3.5.12"
   }
 }

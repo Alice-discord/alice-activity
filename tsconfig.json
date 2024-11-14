@@ -4,10 +4,14 @@
         "module": "Node16",
         "moduleResolution": "node16",
         "strict": true,
+        "allowJs": true,
+        "noImplicitAny": false,
         "jsx": "preserve",
         "sourceMap": true,
         "resolveJsonModule": true,
         "esModuleInterop": true,
+        "allowImportingTsExtensions": true,
+        "noEmit": true,
         "allowSyntheticDefaultImports": true,
         "lib": ["esnext", "dom"],
         "types": ["vite/client"],
@@ -16,6 +20,6 @@
             "~/*": ["resources/*"]
         }
     },
-    "include": ["resources/**/*","src/index.ts"],
+    "include": ["resources/**/*","src/main.ts"],
     "exclude": ["public/**/*", "node_modules", "vendor"]
 }
