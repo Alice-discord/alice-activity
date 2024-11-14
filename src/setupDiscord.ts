@@ -1,10 +1,11 @@
-import { DiscordSDK } from "@discord/embedded-app-sdk";
+import { DiscordSDK, patchUrlMappings } from "@discord/embedded-app-sdk";
 
 let serverurl = new URL(`http://${import.meta.env.VITE_DISCORD_CLIENT_ID}.discordsays.com/.proxy/server/alicediscord`);
 
 let auth: any;
 
 if (!import.meta.env.DEV){
+patchUrlMappings([{prefix: '/server/alicediscord', target: 'server.alicediscord.com'}]);
 var discordSdk = new DiscordSDK(import.meta.env.VITE_DISCORD_CLIENT_ID);
 }
 

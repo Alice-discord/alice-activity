@@ -1,19 +1,17 @@
 <script setup>
 import Count from './components/Count.vue'
-import { Guildicon } from './fetchservericon.ts'
 </script>
 
 <template>
     <div>
       <a href="https://vite.dev" target="_blank">
-        <img src="./assets/rocket.png" class="logo vite rocket" alt="Discord-Rocket">
+        <img src="./assets/rocket.png" class="logo discord rocket" alt="Discord-Rocket">
       </a>
       <a href="https://vuejs.org/" target="_blank">
         <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
       </a>
     </div>
     <Count msg="Discord & Alice Dev" />
-    <img :src="Guildicon" class="logo vue" alt="guild icon">
     <div class="box"><b></b></div>
   </template>
 
@@ -29,5 +27,8 @@ import { Guildicon } from './fetchservericon.ts'
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+.logo.discord:hover {
+  filter: drop-shadow(0 0 2em #cde918aa);
 }
 </style>
