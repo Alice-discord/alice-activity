@@ -17,12 +17,12 @@ async function fetchGuildAvatar() {
     if (currentGuild != null) {
         return `https://cdn.discordapp.com/icons/${currentGuild.id}/${currentGuild.icon}.webp?size=128`
     } else {
-        return `https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg`
+        return `/vite.svg`
     }
   }
 
 if (import.meta.env.DEV){
-var Guildicon: any = `https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg`
+var Guildicon: any = `/vite.svg`
 }
 else {
 var Guildicon: any = `${await fetchGuildAvatar()}`
