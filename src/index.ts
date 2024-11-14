@@ -80,7 +80,9 @@ document.querySelector('#app')!.innerHTML = `
   <div>
     <img src="${rocket}" class="rocket" alt="Discord-Rocket">
     <h1>Hello, World!</h1>
-    <button>PLAY<button>
+  <body>//const button = document.createElement("button");
+  //button.textContent = "Click me!";
+  //document.body.appendChild(button);</body>
     <div class="box"><b></b></div>
   </div>
 `
