@@ -1,4 +1,5 @@
 import "./index.scss";
+import react from "react"
 import rocket from "../images/rocket.png";
 
 import { DiscordSDK } from "@discord/embedded-app-sdk";
@@ -80,6 +81,9 @@ document.querySelector('#app')!.innerHTML = `
   <div>
     <img src="${rocket}" class="rocket" alt="Discord-Rocket">
     <h1>Hello, World!</h1>
+       <button type="button" class="click-me">
+       <h1>Click me!
+       </button> 
     <div class="box"><b></b></div>
   </div>
 `
