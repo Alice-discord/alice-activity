@@ -1,5 +1,6 @@
 <script setup>
 import Count from './components/Count.vue'
+import { activityChannelName } from './fetchvcname.ts'
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import Count from './components/Count.vue'
       </a>
     </div>
     <Count msg="Discord & Alice Dev" />
+    <p>{{ activityChannelName }}</p>
     <div class="box"><b></b></div>
   </template>
 

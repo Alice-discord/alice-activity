@@ -1,6 +1,4 @@
-import {discordSdk, setupDiscordSdk} from './setupDiscord.ts'
-
-setupDiscordSdk()
+import {discordSdk} from './setupDiscord.ts'
 
 console.log("Discord SDK is authenticated");
 
@@ -18,5 +16,11 @@ async function fetchVoiceChannelName() {
   }
   return activityChannelName
 }
+if (import.meta.env.DEV){
+var activityChannelName: any = fetchVoiceChannelName()
+}
+else {
+var activityChannelName: any = `${await fetchVoiceChannelName()}`
+}
 
-export { fetchVoiceChannelName }
+export { activityChannelName }

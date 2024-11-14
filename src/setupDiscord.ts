@@ -50,4 +50,10 @@ const { code } = await discordSdk.commands.authorize({
   }
 }
 
-export {setupDiscordSdk, discordSdk}
+if (!import.meta.env.DEV){
+  setupDiscordSdk().then(() => {
+    console.log('Discord sdk ready');
+    });
+};
+
+export {discordSdk}
