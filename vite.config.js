@@ -11,9 +11,10 @@ export default defineConfig({
   plugins: [vue()],
   base: `/`,
     server: {
+    host: true,
      proxy: {
       '/api': {
-        target: 'http://localhost:3001',
+        target: 'http://server.alicediscord.com:3001',
         changeOrigin: true,
         secure: false,
         ws: true,
