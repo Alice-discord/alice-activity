@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "build": "npm i && vite build",
-    "dev": "npm run build && vite",
-    "preview": "npm run build && vite preview",
-    "host": "npm run build && vite --host",
+    "dev": "npm run build && vite --port 80",
+    "preview": "npm run build && vite preview --port 80",
+    "host": "npm run build && vite --host --port 80",
     "deploy": "npm run build && echo client.alicediscord.com > dist/CNAME && gh-pages -d dist"
   },
   "devDependencies": {

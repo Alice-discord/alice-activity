@@ -15,10 +15,10 @@ async function fetchVoiceChannelName() {
   return activityChannelName
 }
 if (import.meta.env.DEV){
-var activityChannelName: any = fetchVoiceChannelName()
+var activityChannelName: any = `(PlaceHolder - ChannelName)`
 }
 else {
-var activityChannelName: any = `${await fetchVoiceChannelName()}`
+var activityChannelName: any = await fetchVoiceChannelName()
 }
 
 export { activityChannelName }

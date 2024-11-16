@@ -54,6 +54,7 @@ if (!import.meta.env.DEV){
   setupDiscordSdk().then(() => {
     console.log('Discord sdk ready');
     });
+  var setupSdkComplete = true
 };
 
-export {discordSdk, auth}
+export {discordSdk, auth, setupSdkComplete}

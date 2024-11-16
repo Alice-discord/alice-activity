@@ -10,8 +10,11 @@ export default defineConfig({
   },
   plugins: [vue()],
   base: `/`,
-    server: {
-    host: true,
+  server: {
+    hmr: {
+      host: '192.168.1.254',
+    }
+  },
      proxy: {
       '/api': {
         target: 'http://server.alicediscord.com:3001',
@@ -24,4 +27,4 @@ export default defineConfig({
       clientPort: 443,
     },
   },
-});
+);

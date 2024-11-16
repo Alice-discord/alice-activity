@@ -11,15 +11,14 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  overflow:hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 $logoh: 6em;
 $logop: 1.5em;
-
-.click-me {
-  height: 100px;
-  width: 600px;
-}
 
 .rocket {
   height: $logoh;
@@ -33,8 +32,6 @@ $logop: 1.5em;
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -49,44 +46,4 @@ h1 {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
-
-:root b {
-  display: block;
-  height: $logoh;
-  width: $logoh;
-  padding: $logop;
-  background-image: url(./assets/svg-logo.svg);
-  background-size: 100%;
-  position: absolute;
-  -webkit-animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
-  -moz-animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
-  -o-animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
-  animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
-}
-
-@-webkit-keyframes moveX {
-  from { left: 0; } to { left: 100vw; }
-}
-@-moz-keyframes moveX {
-  from { left: 0; } to { left: 100vw; }
-}
-@-o-keyframes moveX {
-  from { left: 0; } to { left: 100vw; }
-}
-@keyframes moveX {
-  from { left: 0; } to { left: 100vw; }
-}
-
-@-webkit-keyframes moveY {
-  from { top: 0; } to { top: 100vh; }
-}
-@-moz-keyframes moveY {
-  from { top: 0; } to { top: 100vh; }
-}
-@-o-keyframes moveY {
-  from { top: 0; } to { top: 100vh; }
-}
-@keyframes moveY {
-  from { top: 0; } to { top: 100vh; }
 }
