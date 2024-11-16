@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Alice" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 158.09 197.22">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-2 {
+        fill: #bb3539;
+      }
+
+      .cls-3 {
+        fill: #9b9b9b;
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="23.88" y1="163.28" x2="60.78" y2="163.28" gradientUnits="userSpaceOnUse">
+      <stop offset=".07" stop-color="#9b9b9b"/>
+      <stop offset="1" stop-color="#231f20" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="96.52" y1="163.04" x2="134.35" y2="163.04" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#231f20" stop-opacity="0"/>
+      <stop offset=".85" stop-color="#9b9b9b"/>
+    </linearGradient>
+  </defs>
+  <path id="A" class="cls-3" d="M79.57,47.22C53.04,97.22,26.52,147.22,0,197.22c7.96-3.48,15.92-6.96,23.88-10.43,8.79-15.63,17.58-31.26,26.37-46.9,18.9-.19,37.8-.39,56.71-.58l27.39,47.48c7.91,3.48,15.83,6.96,23.74,10.43-26.17-50-52.35-100-78.52-150ZM63.13,115.04l15.91-29.48,15.91,29.48h-31.83Z"/>
+  <path id="HAT" class="cls-2" d="M22.96,96.98c8.96-3.54,17.91-7.09,26.87-10.63,9.91-18.96,19.83-37.91,29.74-56.87,9.83,18.96,19.65,37.91,29.48,56.87,8.7,3.54,17.39,7.09,26.09,10.63C116.61,64.65,98.09,32.33,79.57,0c-18.87,32.33-37.74,64.65-56.61,96.98Z"/>
+  <path class="cls-4" d="M41.22,178.96c6.52-13.06,13.04-26.12,19.56-39.18l-10.53.11-26.37,46.9c5.78-2.61,11.56-5.22,17.33-7.83Z"/>
+  <path class="cls-1" d="M134.35,186.78l-16.43-7.83-21.39-39.55c3.48-.04,6.96-.07,10.43-.11l27.39,47.48Z"/>
+</svg>
