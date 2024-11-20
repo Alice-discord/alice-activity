@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@discord/embedded-app-sdk": "^1.6.1",
+    "motion": "^11.11.17",
     "vue": "^3.5.12"
   }
 }
